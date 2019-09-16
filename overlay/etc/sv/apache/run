@@ -5,4 +5,7 @@
 
 export TZ="${NAGIOS_TIMEZONE}"
 
+# Apache gets grumpy about PID files pre-existing
+rm -f /var/run/apache2/apache2.pid
+
 exec /usr/sbin/apache2 -D NO_DETACH
