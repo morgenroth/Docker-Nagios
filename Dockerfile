@@ -89,6 +89,9 @@ RUN echo postfix postfix/main_mailer_type string "'Internet Site'" | debconf-set
         snmp-mibs-downloader                \
         unzip                               \
         python                              \
+        python3-defusedxml                  \
+        python3-nagiosplugin                \
+        ca-certificates                     \
                                                 && \
     apt-get clean && rm -Rf /var/lib/apt/lists/*
 
